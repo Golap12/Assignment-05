@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment-05</title>
     <!-- Tailwind Css Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,12 +16,15 @@
 
 
     <header class="container mx-auto mt-3 lg:my-10 px-5 md:px-0 lg:px-20">
+
+        <!-- Nav section -->
+
         <nav class="flex justify-between items-center">
             <div class="text-xl lg:text-4xl font-extrabold">
                 <h1>P-Ticket</h1>
             </div>
             <div class="hidden lg:flex sm:flex">
-                <ul class="flex gap-5 text-[#030712B3]">
+                <ul class="flex gap-10 text-lg text-[#030712B3]">
                     <li class="hover:cursor-pointer"><a href="#"></a>Home</li>
                     <li class="hover:cursor-pointer"><a href="#"></a>About</li>
                     <li class="hover:cursor-pointer"><a href="#"></a>Destination</li>
@@ -30,31 +33,96 @@
             </div>
             <div>
                 <button
-                    class="lg:py-3 lg:px-6 px-4 py-2 bg-btncol rounded-lg text-xl font-extrabold text-[#1DD100] bg-[#1DD1001A] flex items-center justify-center gap-2">
+                    class="lg:py-3 lg:px-6 px-4 py-2 bg-btncol rounded-xl text-xl font-extrabold text-[#1DD100] bg-[#1DD1001A] flex items-center justify-center gap-2 border-2 border-[#1DD1001A]">
                     <p>Bus</p> <img src="./images/bus-icon.png" alt="">
                 </button>
             </div>
         </nav>
 
+        <!-- Hero section -->
+
         <section class="container mx-auto mt-6 lg:mt-16 my-12 mb-8">
-            <div class="rounded-3xl bg-[url(./images/banner.png)] bg-cover bg-center bg-no-repeat] h-[550px] flex flex-col gap-5 justify-center items-center">
+            <div
+                class="rounded-3xl bg-[url(./images/banner.png)] bg-cover bg-center bg-no-repeat] h-[550px] flex flex-col lg:justify-start justify-center">
 
-                <h1 class="text-5xl text-white font-extrabold text-center">End-to-End Travel with</h1>
-                <h1 class="text-[#1DD100] text-5xl font-extrabold text-center">P Paribahan</h1>
+                <div class="flex flex-col gap-5 justify-center items-center py-10">
+                    <h1 class="lg:text-[60px] text-[30px] text-white font-extrabold text-center">End-to-End Travel with
+                        <br><span class="text-[#1DD100]">P Paribahan</span>
+                    </h1>
 
-                <p class="text-white text-center text-lg">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <p class="text-white text-center lg:text-lg lg:w-[600px] w-[350px]">Yes, you can run unit tests and
+                        view the results directly within the app. The integrated testing features allow for a
+                        streamlined .</p>
 
-                <button class="px-6 py-4 bg-[#1DD100] text-xl font-bold rounded-lg">Buy Tickets</button>
+                    <button class="lg:mt-5 mt-3 px-6 py-4 bg-[#1DD100] rounded-lg"><a class="text-xl font-bold"
+                            href="#">Buy Tickets</a></button>
+                </div>
 
             </div>
         </section>
-        
+
     </header>
 
+    <!-- ------------------------------------------------- -->
+
+    <main class="container mx-auto ">
+        <!-- Best offers for you -->
+        <section class="lg:my-32 mt-20 px-5 md:px-0 lg:px-20 space-y-14">
+            <div>
+                <h1 class="lg:text-4xl text-3xl font-bold text-center">Best offers for you</h1>
+            </div>
+
+            <div class="lg:flex justify-center space-y-5 lg:space-y-0 gap-5">
+
+                <div class="lg:flex justify-between items-center gap-8 bg-[#FFBF0F] rounded-3xl relative">
+                    <div class="space-y-3 lg:p-10 p-5 text-center lg:text-start">
+                        <h1 class="lg:text-4xl text-3xl font-extrabold">15% OFF</h1>
+                        <p class="lg:text-lg font-bold">on your next purchase</p>
+                        <p class="lg:text-lg text-[#03071280]">use by January 2024</p>
+                    </div>
+
+                    <div class="border-2 h-full border-dashed "></div>
+
+                    <div class="space-y-2 text-center lg:p-10 p-5">
+                        <h1 class="lg:text-3xl text-xl font-bold">NEW15</h1>
+                        <p class="lg:text-lg">Coupon Code</p>
+                    </div>
+
+                    <div class="w-10 h-10 bg-white rounded-full absolute lg:top-[-20px] lg:left-[53.5%] top-[50%] left-[-20px]"></div>
+                    <div class="w-10 h-10 bg-white rounded-full absolute lg:top-[180px] lg:left-[53.5%] top-[50%] right-[-20px]"></div>
+                </div>
 
 
-    <main>
+                <div class="lg:flex justify-between items-center gap-8 bg-[#F78C9C] rounded-3xl relative">
+                    <div class="space-y-3 lg:p-10 p-5 text-center lg:text-start">
+                        <h1 class="lg:text-4xl text-3xl font-extrabold">15% OFF</h1>
+                        <p class="lg:text-lg font-bold">on your next purchase</p>
+                        <p class="lg:text-lg text-[#03071280]">use by January 2024</p>
+                    </div>
 
+                    <div class="border-2 h-full border-dashed"></div>
+
+                    <div class="space-y-2 text-center lg:p-10 p-5">
+                        <h1 class="lg:text-3xl text-xl font-bold">Couple 20</h1>
+                        <p class="lg:text-lg">Coupon Code</p>
+                    </div>
+
+                    <div class="w-10 h-10 bg-white rounded-full absolute lg:top-[-20px] lg:left-[50.5%] top-[50%] left-[-20px]"></div>
+                    <div class="w-10 h-10 bg-white rounded-full absolute lg:top-[180px] lg:left-[50.5%] top-[50%] right-[-20px]"></div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center items-center">
+                <button class="mt-5 px-7 py-4 text-[#1DD100] border-[#1DD100] border-2 rounded-lg"><a
+                        class="text-xl font-bold" href="#">Buy Tickets</a></button>
+            </div>
+        </section>
+
+        <!-- ----------------------------------------------- -->
+
+
+        
     </main>
 
 
