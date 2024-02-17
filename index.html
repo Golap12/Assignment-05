@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,40 @@
 
 
 
-    <header>
+    <header class="container mx-auto mt-3 lg:my-10 px-5 md:px-0 lg:px-20">
+        <nav class="flex justify-between items-center">
+            <div class="text-xl lg:text-4xl font-extrabold">
+                <h1>P-Ticket</h1>
+            </div>
+            <div class="hidden lg:flex sm:flex">
+                <ul class="flex gap-5 text-[#030712B3]">
+                    <li class="hover:cursor-pointer"><a href="#"></a>Home</li>
+                    <li class="hover:cursor-pointer"><a href="#"></a>About</li>
+                    <li class="hover:cursor-pointer"><a href="#"></a>Destination</li>
+                    <li class="hover:cursor-pointer"><a href="#"></a>Search</li>
+                </ul>
+            </div>
+            <div>
+                <button
+                    class="lg:py-3 lg:px-6 px-4 py-2 bg-btncol rounded-lg text-xl font-extrabold text-[#1DD100] bg-[#1DD1001A] flex items-center justify-center gap-2">
+                    <p>Bus</p> <img src="./images/bus-icon.png" alt="">
+                </button>
+            </div>
+        </nav>
 
+        <section class="container mx-auto mt-6 lg:mt-16 my-12 mb-8">
+            <div class="rounded-3xl bg-[url(./images/banner.png)] bg-cover bg-center bg-no-repeat] h-[550px] flex flex-col gap-5 justify-center items-center">
+
+                <h1 class="text-5xl text-white font-extrabold text-center">End-to-End Travel with</h1>
+                <h1 class="text-[#1DD100] text-5xl font-extrabold text-center">P Paribahan</h1>
+
+                <p class="text-white text-center text-lg">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+
+                <button class="px-6 py-4 bg-[#1DD100] text-xl font-bold rounded-lg">Buy Tickets</button>
+
+            </div>
+        </section>
+        
     </header>
 
 
@@ -25,7 +57,7 @@
 
     </main>
 
-    
+
 
     <footer>
 
