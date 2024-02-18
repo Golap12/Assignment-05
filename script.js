@@ -17,7 +17,7 @@ for (let index = 0; index < seats.length; index++) {
             availableSeat++;
             availableSeatElement.innerText = availableSeat;
 
-            
+
             const seatName = seat.innerText;
             const selectedIndex = selectedSeats.indexOf(seatName);
             if (selectedIndex !== -1) {
@@ -38,14 +38,20 @@ for (let index = 0; index < seats.length; index++) {
             if (availableSeat > 0) {
                 availableSeat--;
                 availableSeatElement.innerText = availableSeat;
-                    
+
                 const seatName = seat.innerText;
                 selectedSeats.push(seatName);
                 motPrice += perSeatPrice;
+
+                let grandTotalElement = document.getElementById('grand-total');
+                let grandTotalText = grandTotalElement.innerText.trim();
+                let newGrandTotal = motPrice;
+                grandTotalElement.innerText = `BDT ${newGrandTotal}`;
+
             }
         }
 
-        
+
         const selectCount = document.getElementById('select-count')
         selectCount.innerText = selectedSeats.length;
 
@@ -68,57 +74,93 @@ for (let index = 0; index < seats.length; index++) {
 
         const totalContainer = document.getElementById('total');
         totalContainer.innerText = `BDT ${motPrice}`;
-        
-        
+
+
     });
 }
 
 
 const btn = document.getElementById("cupon")
-btn.addEventListener("click", function(){
+btn.addEventListener("click", function () {
     const inputElement = document.getElementById("inp-field").value;
     const cuponCoad = inputElement.split(" ").join("").toUpperCase();
 
-   if(motPrice === 2200){
+    if (motPrice === 2200) {
 
 
-    if(cuponCoad === "NEW15"){
 
-        const discountElement = document.getElementById("grand-total");
+        if (cuponCoad === "NEW15") {
+
+            const discountElement = document.getElementById("grand-total");
             const discountAmount = motPrice * 0.15;
             const discountPrice = motPrice - discountAmount;
             discountElement.innerText = discountPrice;
-    }
-    else if(cuponCoad === "COUPLE20"){
-        const discountElement = document.getElementById("grand-total");
+            const cuponDiv = document.getElementById('cupon-container');
+            cuponDiv.classList.add('hidden');
+        }
+        else if (cuponCoad === "COUPLE20") {
+            const discountElement = document.getElementById("grand-total");
             const discountAmount = motPrice * 0.2;
             const discountPrice = motPrice - discountAmount;
             discountElement.innerText = discountPrice;
-    }
-    else if(cuponCoad === "KHALID90"){
-        const discountElement = document.getElementById("grand-total");
+            const cuponDiv = document.getElementById('cupon-container');
+            cuponDiv.classList.add('hidden');
+        }
+        else if (cuponCoad === "KHALID90") {
+            const discountElement = document.getElementById("grand-total");
             const discountAmount = motPrice * 0.9;
             const discountPrice = motPrice - discountAmount;
             discountElement.innerText = discountPrice;
-    }
-    else if(cuponCoad === "GOLAP99"){
-        const discountElement = document.getElementById("grand-total");
+            const cuponDiv = document.getElementById('cupon-container');
+            cuponDiv.classList.add('hidden');
+        }
+        else if (cuponCoad === "GOLAP99") {
+            const discountElement = document.getElementById("grand-total");
             const discountAmount = motPrice * 0.99;
             const discountPrice = motPrice - discountAmount;
             discountElement.innerText = discountPrice;
+            const cuponDiv = document.getElementById('cupon-container');
+            cuponDiv.classList.add('hidden');
+        }
+
+        else {
+            alert("Invalid Coupon")
+        }
+    }
+    else {
+        alert("Select At least 4 seat")
     }
 
-    else{
-        alert("Invalid Coupon")
-    }
-   }
-   else{
-    alert("Select At least 4 seat")
-   }
 
-    const cuponDiv = document.getElementById('cupon-container');
-    cuponDiv.classList.add('hidden');
 
 })
+
+
+const nextBtn = document.getElementById("submit-button");
+const inputElement2 = document.getElementById("inp-number");
+
+nextBtn.addEventListener("click", function () {
+    const inputValue = inputElement2.value.trim();
+
+    if (inputValue !== "") {
+        const successDiv = document.getElementById("success-div");
+        successDiv.classList.remove('hidden');
+
+        const continueBtn = document.getElementById('next');
+        continueBtn.addEventListener("click", function () {
+            successDiv.classList.add('hidden');
+        });
+    }
+});
+
+inputElement2.addEventListener("input", function () {
+    nextBtn.disabled = inputElement2.value.trim() === "";
+});
+
+
+
+
+
+
 
 
