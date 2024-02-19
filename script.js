@@ -83,7 +83,7 @@ for (let index = 0; index < seats.length; index++) {
 const btn = document.getElementById("cupon")
 btn.addEventListener("click", function () {
     const inputElement = document.getElementById("inp-field").value;
-    const cuponCoad = inputElement.split(" ").join("").toUpperCase();
+    const cuponCoad = inputElement;
 
     if (motPrice === 2200) {
 
@@ -106,23 +106,6 @@ btn.addEventListener("click", function () {
             const cuponDiv = document.getElementById('cupon-container');
             cuponDiv.classList.add('hidden');
         }
-        else if (cuponCoad === "KHALID90") {
-            const discountElement = document.getElementById("grand-total");
-            const discountAmount = motPrice * 0.9;
-            const discountPrice = motPrice - discountAmount;
-            discountElement.innerText = discountPrice;
-            const cuponDiv = document.getElementById('cupon-container');
-            cuponDiv.classList.add('hidden');
-        }
-        else if (cuponCoad === "GOLAP99") {
-            const discountElement = document.getElementById("grand-total");
-            const discountAmount = motPrice * 0.99;
-            const discountPrice = motPrice - discountAmount;
-            discountElement.innerText = discountPrice;
-            const cuponDiv = document.getElementById('cupon-container');
-            cuponDiv.classList.add('hidden');
-        }
-
         else {
             alert("Invalid Coupon")
         }
@@ -143,19 +126,27 @@ nextBtn.addEventListener("click", function () {
     const inputValue = inputElement2.value.trim();
 
     if (inputValue !== "") {
+
         const successDiv = document.getElementById("success-div");
         successDiv.classList.remove('hidden');
 
         const continueBtn = document.getElementById('next');
         continueBtn.addEventListener("click", function () {
             successDiv.classList.add('hidden');
+            window.location.reload()
         });
     }
 });
 
 inputElement2.addEventListener("input", function () {
     nextBtn.disabled = inputElement2.value.trim() === "";
+
+
 });
+
+
+
+
 
 
 
